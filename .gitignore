@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ignored folders
+weights/
+data/**/
+images/*
+saved_vars/
+configs/*
+
+# Do not ignore certain files in sub folders
+!configs/config.py
+!configs/config_ex.py
+!images/science_2022_demo.jpg
+!images/samples_demo.mp4
+
+#DS_Store
+.DS_Store
+
+# pycharm
+.idea/
+
