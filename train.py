@@ -1,4 +1,3 @@
-# TODO: Define total lr decay rate as a parameter
 # Basic imports
 import os
 import time

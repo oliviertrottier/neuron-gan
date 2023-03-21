@@ -1,4 +1,3 @@
-# TODO: Change the name of the original dataset
 import os
 import copy
 import numpy as np

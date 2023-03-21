@@ -1,4 +1,3 @@
-# TODO: Insert weights download link
 import os
 from configs import config
 from utils import ValidatedInput
