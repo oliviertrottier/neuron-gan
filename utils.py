@@ -387,7 +387,7 @@ class ProgressBar:
         # Count the number of hours, minutes and seconds that remain.
         time_remaining = [0, 0, 0]
         time_remaining[0] = int(time_remaining_sec // 3600)
-        time_remaining[1] = int((time_remaining_sec - 60 * time_remaining[0]) // 60)
+        time_remaining[1] = int((time_remaining_sec - 3600 * time_remaining[0]) // 60)
         time_remaining[2] = int((time_remaining_sec - 60 * time_remaining[1] - 3600 * time_remaining[0]))
         return time_remaining
 
