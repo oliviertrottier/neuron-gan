@@ -24,13 +24,6 @@ LeakyReLU_neg_slope_default = config.LeakyReLU_leak  # Leak coefficient of Leaky
 # N_gen_features = [1024, 512, 256, 128, 64, 32, 16, 8]
 # N_dis_features = [16, 32, 64, 128, 128, 128, 128]
 
-# N_gen_features = [512, 256, 128, 64, 32, 16, 8, 8]
-# N_dis_features = [64, 128, 256, 256, 256, 128, 64]
-
-
-# N_gen_features = [8, 8, 8, 8, 8, 8, 8, 8]
-# N_dis_features = [8, 8, 8, 8, 8, 8, 8]
-
 ###################### PG-GAN ######################
 # Based on "Progressive Growing of GANs for Improved Quality, Stability, and Variation.", 2018
 

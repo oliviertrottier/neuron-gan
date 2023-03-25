@@ -221,19 +221,12 @@ def plot_dataset(dataset: NeuronDataset, resolutions: list[int], filename_prefix
 
 
 if __name__ == "__main__":
-    # dataset_name = 'real_images'
     dataset_name = 'science_2022'
     dataset_dir = os.path.abspath(os.path.join(config.data_dir, dataset_name))
     images_dir = config.images_dir
 
     Main_dataset = NeuronDataset(dataset_dir, augmentations=True)
     Main_dataset_no_aug = NeuronDataset(dataset_dir, augmentations=False)
-
-    # Test random contrast transform
-    # from utils import plot_image
-    # rand_contrast = torchvision.transforms.ColorJitter(contrast=0.25)
-    # img = Main_dataset[0]
-    # plot_image(rand_contrast(img))
 
     # Plot examples of the images
     # Main_dataset.set_image_size(16)
@@ -243,25 +236,3 @@ if __name__ == "__main__":
     resolutions = [2 ** i for i in range(4, 10)]
     plot_dataset(Main_dataset_no_aug, resolutions, filename_prefix=f'{dataset_name}_no_aug')
     plot_dataset(Main_dataset, resolutions, filename_prefix=f'{dataset_name}_aug')
-
-    # img = np.array(Main_dataset.images[0])
-
-    # Applying multi-Otsu threshold for the default value, generating
-    # three classes.
-    # thresholds = threshold_multiotsu(img)
-
-    # Using the threshold values, we generate the three regions.
-    # regions = np.digitize(img, bins=thresholds)
-
-    # applying Otsu thresholding
-    # as an extra flag in binary
-    # thresholding
-    # ret, thresh1 = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-
-    # the window showing output image
-    # with the corresponding thresholding
-    # techniques applied to the input image
-    # import cv2
-    # cv2.imshow('Otsu Threshold', thresh1)
-    # cv2.waitKey()  # wait for a keyboard input
-    # cv2.destroyAllWindows()
