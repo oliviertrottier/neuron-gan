@@ -60,9 +60,9 @@ The architecture of the network is inspired by progressively growing GANs (PGGAN
 
 The discriminator loss function is based on the Wasserstein GAN (WGAN) loss with two extra terms:
 
-$$
-\mathcal{L}_{D} =  -\langle D(x) \rangle_{x \in Real} + \langle D(G(z)) \rangle_{z \in L} + \lambda \langle (||\nabla D(y)||_2 - 1)^2 \rangle_{y} + \epsilon_{\text{drift}} \langle D(x)^2 \rangle_{x \in Real}
-$$
+$`
+\mathcal{L}_{D} =  -\langle D(x) \rangle_{x \in Real} + \langle D(G(z)) \rangle_{z \in L} + \lambda \langle (\lVert\nabla D(y)\rVert_2 - 1)^2 \rangle_{y} + \epsilon_{\text{drift}} \langle D(x)^2 \rangle_{x \in Real}
+`$
 
 In the second term, $L$ indicates the latent space of the generator, which is formed by sampling normally-distributed random vectors normalized with the $L^2$ norm.
 
@@ -72,9 +72,9 @@ The last term ensures that the critic score outputted by the discriminator does 
 
 The generator loss is the same as the WGAN loss:
 
-$$
+$`
 \mathcal{L}_{G} = -\langle D(G(z)) \rangle_{z \in L}
-$$
+`$
 
 ## Generated samples
 Here is a timelapse of 16 images created by the generator over the training epochs.
