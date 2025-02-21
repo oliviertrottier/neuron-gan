@@ -22,3 +22,5 @@ configs/*
 # pycharm
 .idea/
 
+# misc
+neuron-gan.ipynb
